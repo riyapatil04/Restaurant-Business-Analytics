@@ -15,15 +15,18 @@ def read_dataset(filename):
 
 def main():
     files = [
-    "qsr_pos_logs.csv",
-    "menu_cogs.csv"
+        "qsr_pos_logs.csv",
+        "menu_cogs.csv"
     ]
 
     for file in files:
         df = read_dataset(file)
-        print(f"{file}: {df.shape[0]} rows, {df.shape[1]} columns")
-        print(df.head(3))
-        print("-" * 60)
+        print(f"\nDATASET: {file}")
+        print(f"Rows: {df.shape[0]}, Columns: {df.shape[1]}")
+        print("Columns:")
+        for col in df.columns:
+            print("-", col)
+        print("-" * 80)
 
 if __name__ == "__main__":
     main()

@@ -3,17 +3,17 @@ import pandas as pd
 
 RAW_DIR = Path("data/raw")
 
+
 def read_dataset(filename):
     file_path = RAW_DIR / filename
 
     if filename.lower().endswith(".csv"):
         return pd.read_csv(file_path)
-    elif filename.lower().endswith((".xlsx", ".xls")):
-        return pd.read_excel(file_path)
     else:
         raise ValueError(f"Unsupported file type: {filename}")
 
-def validate_qsr_pos(df):
+
+def validate_pos(df):
     issues = {}
 
     issues["negative_quantity"] = int((df["quantity"] < 0).sum()) if "quantity" in df.columns else None
@@ -25,25 +25,34 @@ def validate_qsr_pos(df):
 
     return issues
 
-def validate_restaurant_data(df):
+
+def validate_menu_cogs(df):
     issues = {}
 
-    issues["negative_count"] = int((df["Count"] < 0).sum()) if "Count" in df.columns else None
-    issues["zero_count"] = int((df["Count"] == 0).sum()) if "Count" in df.columns else None
+    issues["negative_selling_price"] = int((df["selling_price"] < 0).sum()) if "selling_price" in df.columns else None
+    issues["negative_ingredient_cost"] = int((df["ingredient_cost"] < 0).sum()) if "ingredient_cost" in df.columns else None
+    issues["negative_packaging_cost"] = int((df["packaging_cost"] < 0).sum()) if "packaging_cost" in df.columns else None
+    issues["negative_labor_cost"] = int((df["labor_cost"] < 0).sum()) if "labor_cost" in df.columns else None
+    issues["negative_total_cogs"] = int((df["total_cogs"] < 0).sum()) if "total_cogs" in df.columns else None
+    issues["food_cost_pct_out_of_range"] = int(
+        ((df["food_cost_pct"] < 0) | (df["food_cost_pct"] > 100)).sum()
+    ) if "food_cost_pct" in df.columns else None
 
     return issues
 
+
 def main():
-    qsr = read_dataset("qsr_pos_logs.csv")
-    rest = read_dataset("Restaurant_Data.xlsx")
+    pos = read_dataset("qsr_pos_logs.csv")
+    menu = read_dataset("menu_cogs.csv")
 
-    print("QSR POS Validation:")
-    print(validate_qsr_pos(qsr))
+    print("POS Validation:")
+    print(validate_pos(pos))
     print("-" * 60)
 
-    print("Restaurant Data Validation:")
-    print(validate_restaurant_data(rest))
+    print("Menu COGS Validation:")
+    print(validate_menu_cogs(menu))
     print("-" * 60)
+
 
 if __name__ == "__main__":
     main()

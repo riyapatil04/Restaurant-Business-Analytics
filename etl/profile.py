@@ -38,8 +38,8 @@ def profile_dataframe(df, name):
 
 def main():
     files = [
-        "qsr_pos_logs.csv",
-        "Restaurant_Data.xlsx"
+    "qsr_pos_logs.csv",
+    "menu_cogs.csv"
     ]
 
     for file in files:
