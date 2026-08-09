@@ -3,27 +3,29 @@ import pandas as pd
 
 RAW_DIR = Path("data/raw")
 
-def read_dataset(filename):
-    file_path = RAW_DIR / filename
 
-    if filename.lower().endswith(".csv"):
-        return pd.read_csv(file_path)
-    elif filename.lower().endswith((".xlsx", ".xls")):
-        return pd.read_excel(file_path)
-    else:
-        raise ValueError(f"Unsupported file type: {filename}")
+def read_pos():
+    return pd.read_csv(RAW_DIR / "qsr_pos_logs.csv")
+
+
+def read_menu():
+    return pd.read_csv(RAW_DIR / "menu_cogs.csv")
+
 
 def main():
-    files = [
-    "qsr_pos_logs.csv",
-    "menu_cogs.csv"
-    ]
+    pos = read_pos()
+    menu = read_menu()
 
-    for file in files:
-        df = read_dataset(file)
-        print(f"{file}: {df.shape[0]} rows, {df.shape[1]} columns")
-        print(df.head(3))
-        print("-" * 60)
+    print("POS dataset:")
+    print(f"  Rows: {pos.shape[0]}, Columns: {pos.shape[1]}")
+    print(pos.head(3))
+    print("-" * 60)
+
+    print("Menu COGS dataset:")
+    print(f"  Rows: {menu.shape[0]}, Columns: {menu.shape[1]}")
+    print(menu.head(3))
+    print("-" * 60)
+
 
 if __name__ == "__main__":
     main()
