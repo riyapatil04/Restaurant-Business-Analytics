@@ -1,0 +1,13 @@
+dataset,file,purpose
+KPI Summary,dashboard_kpis.csv,Overall business KPIs
+Monthly Trend,dashboard_monthly_trend.csv,Revenue and sales trends
+Menu Performance,dashboard_menu_performance.csv,Menu sales and profitability
+Menu Matrix,dashboard_menu_matrix.csv,Star / Problem Child / Hidden Gem / Dog
+Master Menu,dashboard_master_menu.csv,Complete menu dashboard dataset
+Category Performance,dashboard_category_performance.csv,Category revenue and profitability
+Store Performance,dashboard_store_performance.csv,Store comparison
+Service Mode,dashboard_service_mode.csv,Dine-in / Drive-thru / Takeout / Delivery
+Daypart,dashboard_daypart.csv,Breakfast / Lunch / Dinner performance
+Payment,dashboard_payment.csv,Payment method analysis
+Discount,dashboard_discount.csv,Discount impact
+Strategic Menu,dashboard_strategic_menu.csv,Strategic menu actions

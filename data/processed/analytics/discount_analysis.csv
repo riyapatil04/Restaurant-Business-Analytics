@@ -1,0 +1,3 @@
+discount_status,orders,quantity_sold,revenue,total_discount,avg_order_value,avg_discount_per_order,discounted_order_share_pct,revenue_share_pct
+Discounted,156,199,918.0,112.97,5.884615384615385,0.7241666666666666,8.950086058519794,7.896156085846183
+No Discount,1587,2015,10707.91,0.0,6.747265280403276,0.0,91.04991394148021,92.10384391415381

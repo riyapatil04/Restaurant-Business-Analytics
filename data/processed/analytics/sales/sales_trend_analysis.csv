@@ -1,0 +1,6 @@
+year,month,month_name,period,orders,units_sold,revenue,discount,avg_order_value,revenue_growth_pct,orders_growth_pct,aov_growth_pct,rolling_3m_revenue,rolling_3m_orders,rolling_3m_aov,revenue_trend
+2025,4,April,April 2025,295,382,2042.66,15.52,6.92,,,,2042.66,295.0,6.92,Baseline
+2025,5,May,May 2025,440,550,2829.32,32.36,6.5,38.51,49.15,-6.07,2435.99,367.5,6.71,Strong Growth
+2025,6,June,June 2025,452,574,2967.22,34.24,6.65,4.87,2.73,2.29,2613.07,395.67,6.69,Growth
+2025,7,July,July 2025,420,528,2771.96,23.68,6.6,-6.58,-7.08,-0.8,2856.17,437.33,6.59,Strong Decline
+2025,8,August,August 2025,136,180,1014.75,7.17,7.46,-63.39,-67.62,13.05,2251.31,336.0,6.9,Strong Decline

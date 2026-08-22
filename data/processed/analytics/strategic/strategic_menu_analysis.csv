@@ -1,0 +1,31 @@
+menu_item,category,quantity_sold,revenue,gross_profit,profit_margin_pct,sales_level,profitability_level,menu_classification,strategic_action,priority_score
+Chicken Sandwich Combo,Wrap,151,1494.64,1029.5600000000002,68.88347695766205,High,Low,Problem Child,Improve Margin,3
+Cheeseburger Combo,Burger,150,1356.97,896.47,66.06409869046479,High,Low,Problem Child,Improve Margin,3
+Spicy Chicken Combo,Other,115,1127.35,785.8,69.70328646826628,High,Low,Problem Child,Improve Margin,3
+Double Cheeseburger Combo,Burger,82,853.33,572.07,67.03971499888671,High,Low,Problem Child,Improve Margin,3
+Chicken Sandwich,Wrap,133,806.92,543.5799999999999,67.36479452733852,High,Low,Problem Child,Improve Margin,3
+Cheeseburger,Burger,122,577.33,373.59,64.7099579096877,High,Low,Problem Child,Improve Margin,3
+Double Cheeseburger,Burger,83,513.31,358.0999999999999,69.76291130116303,High,Low,Problem Child,Improve Margin,3
+Onion Rings,Other,128,438.37,305.25,69.63295845974862,High,Low,Problem Child,Improve Margin,3
+Veggie Burger,Burger,66,396.39,271.65,68.53099220464694,High,Low,Problem Child,Improve Margin,3
+Breakfast Burrito,Other,66,290.02,202.9,69.96069236604372,High,Low,Problem Child,Improve Margin,3
+Chicken Nuggets (6pc),Other,44,174.56,119.56,68.49220898258478,Low,Low,Dog,Review / Consider Removal,2
+Latte,Other,47,172.14,123.26,71.60450795863832,Low,High,Hidden Gem,Increase Visibility,2
+Sausage Biscuit,Other,47,164.64,117.17,71.16739552964042,Low,High,Hidden Gem,Increase Visibility,2
+Milkshake,Other,35,152.1,105.9,69.62524654832347,Low,Low,Dog,Review / Consider Removal,2
+Pancake Platter,Other,24,128.06,86.54,67.57769795408403,Low,Low,Dog,Review / Consider Removal,2
+Hash Browns,Other,51,123.69,94.62,76.49769585253456,Low,High,Hidden Gem,Increase Visibility,2
+Ice Cream Cone,Other,42,84.83,60.47,71.28374395850524,Low,High,Hidden Gem,Increase Visibility,2
+Iced Tea,Beverage,38,84.27,70.21,83.31553340453304,Low,High,Hidden Gem,Increase Visibility,2
+Bottled Water,Other,45,76.3,53.8,70.51114023591087,Low,High,Hidden Gem,Increase Visibility,2
+Side Salad,Other,21,63.11,41.48,65.7265092695294,Low,Low,Dog,Review / Consider Removal,2
+Soft Drink (Large),Other,26,57.23,40.33,70.47003319937096,Low,Low,Dog,Review / Consider Removal,2
+Soft Drink (Small),Other,22,42.8,31.58,73.78504672897196,Low,High,Hidden Gem,Increase Visibility,2
+Brownie,Other,10,21.7,16.099999999999998,74.19354838709677,Low,High,Hidden Gem,Increase Visibility,2
+Apple Pie,Other,10,18.51,13.71,74.06807131280388,Low,High,Hidden Gem,Increase Visibility,2
+Spicy Chicken Sandwich,Wrap,110,696.69,490.99,70.4746730970733,High,High,Star,Promote / Protect,1
+French Fries,Sides,170,492.8,372.1,75.5073051948052,High,High,Star,Promote / Protect,1
+Chicken Nuggets (10pc),Other,80,429.96,305.16,70.97404409712532,High,High,Star,Promote / Protect,1
+Egg Muffin,Other,97,371.66,264.96000000000004,71.29096486035624,High,High,Star,Promote / Protect,1
+Coffee,Beverage,98,217.64,184.32,84.69031428046316,High,High,Star,Promote / Protect,1
+Soft Drink (Medium),Other,101,198.59,140.01,70.50203937761216,High,High,Star,Promote / Protect,1
