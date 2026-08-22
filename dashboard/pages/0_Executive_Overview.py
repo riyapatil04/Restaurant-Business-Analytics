@@ -5,7 +5,7 @@ from pathlib import Path
 
 st.set_page_config(
     page_title="Executive Overview",
-    page_icon="??",
+    page_icon="",
     layout="wide"
 )
 
@@ -57,7 +57,7 @@ profitability, category, monthly, service, daypart, store = load_data()
 # ---------------------------------------------------------
 
 st.title("?? Restaurant Business Analytics")
-st.caption("Executive Overview | April�August 2025")
+st.caption("Executive Overview | April-August 2025")
 
 st.divider()
 
@@ -163,7 +163,7 @@ left, right = st.columns(2)
 
 with left:
 
-    st.subheader("?? Revenue by Category")
+    st.subheader("Revenue by Category")
 
     fig_category = px.bar(
         category.sort_values(
@@ -191,7 +191,7 @@ with left:
 
 with right:
 
-    st.subheader("?? Revenue by Daypart")
+    st.subheader("Revenue by Daypart")
 
     fig_daypart = px.bar(
         daypart.sort_values(
@@ -221,7 +221,7 @@ with right:
 # SERVICE MODE
 # ---------------------------------------------------------
 
-st.subheader("?? Revenue by Service Mode")
+st.subheader("Revenue by Service Mode")
 
 service_clean = service[
     service["service_mode"] != "Unknown"
@@ -248,7 +248,7 @@ st.plotly_chart(
 # MANAGEMENT INSIGHTS
 # ---------------------------------------------------------
 
-st.subheader("?? Management Snapshot")
+st.subheader("Management Snapshot")
 
 best_category = category.loc[
     category["revenue"].idxmax()
@@ -274,7 +274,7 @@ with insight1:
         f"""
         **Revenue Leader**
 
-        ?? **{best_category['category']}** is the highest-revenue
+        **{best_category['category']}** is the highest-revenue
         category with **${best_category['revenue']:,.2f}** in revenue.
 
         The strongest daypart is **{best_daypart['daypart']}**,
@@ -288,10 +288,10 @@ with insight2:
         f"""
         **Business Performance**
 
-        ?? **{best_service['service_mode']}** generates the most
+        **{best_service['service_mode']}** generates the most
         revenue among service modes.
 
-        ?? Store **{int(best_store['store_id'])}** is currently
+        Store **{int(best_store['store_id'])}** is currently
         the highest-revenue store with
         **${best_store['revenue']:,.2f}**.
         """
@@ -304,6 +304,6 @@ with insight2:
 st.divider()
 
 st.caption(
-    "Restaurant Business Analytics � Executive Dashboard � "
+    "Restaurant Business Analytics • Executive Dashboard • "
     "Data-driven decision support"
 )
