@@ -5,7 +5,7 @@ from pathlib import Path
 
 st.set_page_config(
     page_title="Customer & Order Behavior",
-    page_icon="??",
+    page_icon="",
     layout="wide"
 )
 
@@ -51,7 +51,7 @@ orders_detail, hourly, order_size, service, payment = load_data()
 # HEADER
 # =========================================================
 
-st.title("?? Customer & Order Behavior")
+st.title("Customer & Order Behavior")
 st.caption("Understanding order size, basket value and purchasing channels")
 
 st.divider()
@@ -130,7 +130,7 @@ st.info(
 # SERVICE MODE
 # =========================================================
 
-st.subheader("?? Order Behavior by Service Mode")
+st.subheader("Order Behavior by Service Mode")
 
 service_display = service[
     service["service_mode"] != "Unknown"
@@ -190,7 +190,7 @@ with right:
 # PAYMENT BEHAVIOR
 # =========================================================
 
-st.subheader("?? Payment Behavior")
+st.subheader("Payment Behavior")
 
 payment_display = payment[
     payment["payment_type"] != "Unknown"
@@ -290,7 +290,7 @@ st.plotly_chart(
 # KEY INSIGHTS
 # =========================================================
 
-st.subheader("?? Order Behavior Insights")
+st.subheader("Order Behavior Insights")
 
 highest_aov_service = service_display.loc[
     service_display["avg_order_value"].idxmax()

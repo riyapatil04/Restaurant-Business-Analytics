@@ -56,7 +56,7 @@ profitability, category, monthly, service, daypart, store = load_data()
 # HEADER
 # ---------------------------------------------------------
 
-st.title("?? Restaurant Business Analytics")
+st.title("Restaurant Business Analytics")
 st.caption("Executive Overview | April-August 2025")
 
 st.divider()
@@ -126,7 +126,7 @@ st.divider()
 # REVENUE TREND
 # ---------------------------------------------------------
 
-st.subheader("?? Revenue Trend")
+st.subheader("Revenue Trend")
 
 monthly["period"] = (
     monthly["month_name"].astype(str)

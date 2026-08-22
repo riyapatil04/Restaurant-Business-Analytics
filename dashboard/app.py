@@ -63,17 +63,17 @@ kpis, monthly, category, daypart = load_data()
 # SIDEBAR
 # ============================================================
 
-st.sidebar.title("🍔 Restaurant Analytics")
+# st.sidebar.title("🍔 Restaurant Analytics")
 
-st.sidebar.markdown(
-    """
-    ### Navigation
+# st.sidebar.markdown(
+#     """
+#     ### Navigation
 
-    **Executive Dashboard**
+#     **Executive Dashboard**
 
-    More analysis pages will be added next.
-    """
-)
+#     More analysis pages will be added next.
+#     """
+# )
 
 st.sidebar.markdown("---")
 
