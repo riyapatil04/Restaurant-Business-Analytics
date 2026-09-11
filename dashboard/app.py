@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from pathlib import Path
+from pipeline_runner import run_pipeline
 
 
 # ============================================================
@@ -81,6 +82,25 @@ st.sidebar.caption(
     "Restaurant Business Analytics Project"
 )
 
+st.sidebar.markdown("---")
+st.sidebar.subheader("Data Refresh")
+
+if st.sidebar.button("Run Data Pipeline"):
+
+    with st.spinner("Running data pipeline..."):
+
+        success, output = run_pipeline()
+
+    if success:
+        st.sidebar.success("Data refreshed successfully.")
+        st.session_state["pipeline_output"] = output
+        st.rerun()
+
+    else:
+        st.sidebar.error("Pipeline failed.")
+
+        with st.expander("Pipeline Output"):
+            st.code(output)
 
 # ============================================================
 # TITLE

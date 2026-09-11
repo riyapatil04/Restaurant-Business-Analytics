@@ -2,12 +2,26 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from pathlib import Path
+from data_quality import get_quality_summary
 
 st.set_page_config(
     page_title="Executive Overview",
     page_icon="",
     layout="wide"
 )
+
+quality = get_quality_summary()
+
+if quality["available"]:
+
+    if quality["failed"] == 0:
+        st.success(
+            f"Data Quality: All {quality['checks']} checks passed."
+        )
+    else:
+        st.warning(
+            f"Data Quality: {quality['failed']} checks failed."
+        )
 
 # ---------------------------------------------------------
 # PATHS
@@ -121,6 +135,21 @@ col4.metric(
 )
 
 st.divider()
+
+st.subheader("Business Snapshot")
+
+st.markdown(
+    """
+    **What this dashboard helps answer**
+
+    - How much revenue is the restaurant generating?
+    - Which periods and days generate the most sales?
+    - Which menu items contribute the most revenue and profit?
+    - Which menu items have high demand but weaker margins?
+    - Which stores, service modes, and dayparts perform differently?
+    - Where are potential operational problems?
+    """
+)
 
 # ---------------------------------------------------------
 # REVENUE TREND
